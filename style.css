@@ -123,43 +123,52 @@
 }
 
 
-
-
-/* SKILLS */
-.skillsText.card {
-    height: 350px;
-    cursor: pointer;
-    border-radius: 15px;
-    overflow: hidden;
+/* CARD SKILLS (hard + soft) */
+.skillsCard {
+    background: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    max-width: 500px; 
+    margin: 0 auto;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* même hauteur pour toutes */
+
 }
-.skillsText.card:hover {
+
+.skillsCard:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    border: none;
 }
-.skillsText img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-}
-#skills p {
-    text-align: center;
-}
-.skillsIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-}
-.card-title {
-    text-align: center;
-}
-.card:hover .skillsIcon {
+
+.skillsTitle {
     color: #3B6B4A;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
 }
-.skillsText:hover {
-    border: 1px solid #3B6B4A;
+
+/* Grille commune */
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+/* Icônes + texte Skills */
+.skillsItem img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skillsItem p {
+    font-size: 0.7rem;
+    color: #75655b;
+    margin-top: 4px;
 }
 
 
@@ -181,6 +190,7 @@
     color: #3B6B4A;
     font-weight: 700;
     margin-bottom: 15px;
+     text-align: center;
 }
 .portfolioContent .card-text {
     color: black;
@@ -201,6 +211,33 @@
    
 }
 
+/* filtres projets */
+
+
+.filtres-button {
+  font-size: 18px;
+  padding: 10px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  color: #3B6B4A;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.filtres-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.filtres-button.active {
+  background: #3B6B4A;
+  color: #fff;
+}
+
 /* contact */
 .contactColumn {
     display: flex;
@@ -209,6 +246,54 @@
 }
 .contactColumn i {
     color: #3B6B4A;
+}
+
+/* Formualire de contact */
+
+#contact-form{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.contactCard .form-control {
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-color: #3B6B4A;
+}
+
+.contactCard .form-control:focus {
+    border-color: #3B6B4A;
+    box-shadow: 0 0 0 0.25rem rgba(196,168,138,0.25);
+}
+
+.contactCard .btn {
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: #3B6B4A;
+    border-color: #3B6B4A;
+}
+
+.contactCard .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.logo-linkedIn{
+    color: #3B6B4A;
+}
+.linkedInCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px auto;
+}
+.linkedInCard i {
+    margin-bottom: 10px; 
 }
 
 /* footer */
@@ -230,9 +315,9 @@
 
      .hero_title {
         font-size: 3rem;
-        margin-top: 0;
         margin-left: 20px;
         width: 90%;
+        margin-top: 50px;
     }
     .hero_desc {
         margin-top: 20px;
@@ -240,7 +325,7 @@
     }
     .bouton-accueil {
         font-size: 20px;
-        margin-top: 100px;
+        margin-top: 50px;
         padding: 10px 20px;
     }
 
@@ -294,8 +379,8 @@
 /* Portfolio*/
 
     #portfolio{
-        margin-top: 1rem;
-        padding-top: 4rem;
+        margin-top: 10px;
+        padding-top: 45px;
     }
     .portfolioContent{
         width: 80%;
@@ -305,5 +390,9 @@
 /*contact*/
     #contact{
         background-color: #DEE8E1;
+    }
+
+    #contact-form{
+        margin-top: 40px;
     }
 }

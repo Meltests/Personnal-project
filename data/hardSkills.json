@@ -1,0 +1,50 @@
+[
+    {
+        "image": "cyyy.png",
+        "title": "Cypress",
+        "text": "Automatisation de tests end-to-end et d'API, vérification des fonctionnalités clés et suivi des régressions sur les projets.",
+        "alt": "Logo cypress"
+    }, 
+    {
+        "image": "jjj.png",
+        "title": "Jira",
+        "text": "Création et suivi de tickets, planification des sprints et gestion des tâches au sein d'une équipes Agile.",
+        "alt": "Logo jira"
+    },
+    {
+        "image": "swagg.png",
+        "title": "Swagger",
+        "text": "Tester l'API.",
+        "alt": "Logo application Swagger"
+    },
+    {
+        "image": "git.png",
+        "title": "Github",
+        "text": "Github",
+        "alt": "Logo github"
+    },
+    {
+        "image": "html-css.webp",
+        "title": "HTML - CSS",
+        "text": "Intégration d'interfaces responsives et accessibles, utilisation de maquettes Figma, développement d'animations CSS",
+        "alt": "Logo HTML CSS"
+    },
+    {
+        "image": "js.webp",
+        "title": "Javascript",
+        "text": "Manipulation du DOM, création d'éléments dynamiques, gestion de données de formulaires (connexion & contact)",
+        "alt": "Logo javascript"
+    },
+    {
+        "image": "react.webp",
+        "title": "React",
+        "text": "Création d'applications React, création de composants et manipulation de leur état",
+        "alt": "Logo react"
+    },
+     {
+        "image": "docker.webp",
+        "title": "Docker",
+        "text": "Création et exécution de conteneurs pour isoler les environnements de développement.",
+        "alt": "Logo docker"
+    }
+]

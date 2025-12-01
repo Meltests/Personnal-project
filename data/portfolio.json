@@ -4,35 +4,41 @@
         "title": "Booki",
         "text": "Développement du site Booki en HTML et CSS, permettant de rechercher des hébergements et activités selon la ville.",
         "link": "https://github.com/Meltests/Projet-Booki",
-        "alt": "image du site booki avec les hebergements"
+        "alt": "image du site booki avec les hebergements",
+        "category": "Développement"
     },
      {
         "image": "projet-printit.webp",
         "title": "Print it",
         "text": "Développement en JavaScript d'un carrousel dynamique pour le site d'impressions professionnelles Print it.",
         "link": "https://github.com/Meltests/projet6",
-        "alt": "image avec le nom print-it au centre, et un imprimeur en fond"
+        "alt": "image avec le nom print-it au centre, et un imprimeur en fond",
+        "category": "Développement"
     },
     {
         "image": "projet-jseavocats.webp",
         "title": "Jse Avocats",
         "text": "Réalisation de tests manuels et rédaction du cahier de recette pour le site d'un cabinet d'avocats écoresponsable.",
         "link": "https://github.com/Meltests/JseAvocat",
-        "alt": "image du site avec un fond vert et texte de présentation du cabinet"
+        "alt": "image du site avec un fond vert et texte de présentation du cabinet",
+        "category": "Tests"
     },
      {
         "image": "projet-724events.webp",
         "title": "724events",
         "text": "Création d'une campagne de tests, avec cahier de recette, tests manuels (Back/Front), et bilan, pour un site d'événementiel.",
         "link": "https://github.com/Meltests/Projet-test-manuel---724events",
-        "alt": "image de la page d'accueil du site avec un evement"
+        "alt": "image de la page d'accueil du site avec un evement",
+        "category": "Tests"
+
     },
      {
         "image": "projet-sophiebluel.webp",
         "title": "Sophie Bluel",
-        "text": "Développement d'un portfolio interactif en JavaScript, avec connexion à un compte, pour une architecte d'intérieur présentant ses projets.",
+        "text": "Développement d'un portfolio en JavaScript, avec connexion à un compte, pour une architecte d'intérieur présentant ses projets.",
         "link": "https://github.com/Meltests/update-Projet7",
-        "alt": "image de la page d'accueil du site avec description de Sophie Bluel"
+        "alt": "image de la page d'accueil du site avec description de Sophie Bluel",
+        "category": "Développement"
 
     },
      {
@@ -40,21 +46,24 @@
         "title": "Kasa",
         "text": "Conception du site de location d'appartements Kasa en React (vite), avec affichage dynamique des annonces.",
         "link": "https://github.com/Meltests/Projet-Kasa",
-        "alt": "Image des locations sur le site kasa"
+        "alt": "Image des locations sur le site kasa",
+        "category": "Développement"
     },
      {
         "image": "projet-qwenta.webp",
         "title": "Qwenta - Menu Maker",
         "text": "Planification d'une stratégie de développement pour un outil de création de menus destinés aux restaurants.",
         "link": "https://github.com/Meltests/Projet-Qwenta-planification-projet-dev-",
-        "alt": "image de la page de création de menu pour restaurateurs"
+        "alt": "image de la page de création de menu pour restaurateurs",
+        "category": "Plannification projet"
     },
      {
         "image": "projet-tomsen.webp",
         "title": "PayForge - TOMSEN",
         "text": "Élaboration d'une stratégie de test complète de test manuels et automatisés pour la plateforme bancaire TOMSEN.",
         "link": "https://github.com/Meltests/Projet-TOMSEN-Planification-strategie-test",
-        "alt": "Image de l'espace compte bancaire du site"
+        "alt": "Image de l'espace compte bancaire du site",
+        "category": "Plannification projet"
     },
     
     {
@@ -62,6 +71,7 @@
         "title": "Eco-Bath-Bliss",
         "text": "Automatisation des tests front-end et back-end avec Cypress pour un site de vente de savons solides écoresponsables.",
         "link": "https://github.com/Meltests/Projet-Eco-bliss-bath",
-        "alt": "image de la page d'accueil du site avec  2 egeries de la marque"
+        "alt": "image de la page d'accueil du site avec  2 egeries de la marque",
+        "category": "Tests"
     }
 ]

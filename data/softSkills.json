@@ -1,34 +1,44 @@
 [
     {
-        "image": "gestion-de-projet.png",
-        "title": "Gestion de projet"
+        "image": "details.png",
+        "title": "Attention aux détails",
+        "alt": "image projet"
        
     },
     {
-        "image": "optimisation-et-debug.png",
-        "title": "Plannification stratégie de test"
+        "image": "espritcritique.png",
+        "title": "esprit critique et analytique",
+        "alt": "image projet"
     },
     {
-        "image": "test.png",
-        "title": "Empathie"  
+        "image": "communication.png",
+        "title": "Communication empathique",
+        "alt": "image projet" 
     },
     {
-        "image": "gestion-de-projet.png",
-        "title": "Communication"
+        "image": "priorites.png",
+        "title": "Sens des priorités",
+        "alt": "image projet"
        
     },
     {
-        "image": "optimisation-et-debug.png",
-        "title": "Méthode Agile"
+        "image": "collaboratif.png",
+        "title": "Travail collaboratif",
+        "alt": "image projet"
     },
     {
-        "image": "test.png",
-        "title": "Créativité"  },
-        {
-        "image": "optimisation-et-debug.png",
-        "title": "Optimisation et debug"
+        "image": "adaptabilite.png",
+        "title": "Adaptabilité aux changements",
+        "alt": "image projet"
     },
     {
-        "image": "test.png",
-        "title": "Curiosité"  }
+        "image": "curiosite.png",
+        "title": "Curiosité",
+        "alt": "image projet"
+    },
+    {
+        "image": "solution.png",
+        "title": "Résolution de problémes",
+        "alt": "image projet"
+    }
 ]

@@ -25,90 +25,147 @@ function handleNavbarCollapse() {
 }
 
 
+// SKILLS SECTION //
 
-// SECTIONS SKILLS //
+// hard skills//
 
-function createSkillsFromJSON() {
-    const container = document.querySelector("#skills .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
+function createHardSkillsFromJSON() {
+    const row = document.querySelector("#skillsRow");
 
-    // Load the JSON file //
-    fetch("data/skills.json")
-        .then((response) => response.json())
-        .then((data) => {
-            // Iterate through the JSON data and create HTML elements
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card skillsText">
-                        <div class="card-body">
-                            <img src="./images/${item.image}" alt="${item.alt}" loading="lazy" />
-                            <h3 class="card-title mt-3">${item.title}</h3>
-                            <p class="card-text mt-3">${item.text}</p>
-                        </div>
-                    </div>
+    const card = document.createElement("div");
+    card.classList.add("col-lg-6", "mt-4");
+
+    card.innerHTML = `
+        <div class="card skillsCard">
+            <div class="card-body">
+                <h3 class="skillsTitle">Hard Skills</h3>
+                <div class="skillsGrid"></div>
+            </div>
+        </div>
+    `;
+
+    const grid = card.querySelector(".skillsGrid");
+
+    fetch("data/hardSkills.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                const iconDiv = document.createElement("div");
+                iconDiv.classList.add("skillsItem");
+                iconDiv.innerHTML = `
+                    <img src="./images/${item.image}" alt="${item.alt}">
+                    <p><strong>${item.title}</strong></p>
                 `;
-
-                // Append the card to the current row //
-                row.appendChild(card);
-
-                // Creer une nouvelle ligne après 3 cards // 
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
+                grid.appendChild(iconDiv);
             });
         });
+
+    row.appendChild(card);
 }
 
+// SOFT SKILLS//
 
+function createSoftSkillsFromJSON() {
+    const row = document.querySelector("#skillsRow");
+
+    const card = document.createElement("div");
+    card.classList.add("col-lg-6", "mt-4");
+
+    card.innerHTML = `
+        <div class="card skillsCard">
+            <div class="card-body">
+                <h3 class="skillsTitle">Soft Skills</h3>
+                <div class="skillsGrid"></div>
+            </div>
+        </div>
+    `;
+
+    const grid = card.querySelector(".skillsGrid");
+
+    fetch("data/softSkills.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                const iconDiv = document.createElement("div");
+                iconDiv.classList.add("skillsItem");
+                iconDiv.innerHTML = `
+                    <img src="./images/${item.image}" alt="${item.alt}">
+                    <p><strong>${item.title}</strong></p>
+                `;
+                grid.appendChild(iconDiv);
+            });
+        });
+
+    row.appendChild(card);
+}
 
 
 // SECTION PORTFOLIO // 
 
 function createPortfolioFromJSON() {
-    const container = document.querySelector("#portfolio .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
+  const container = document.querySelector("#portfolio .container");
 
-    // Load the JSON file
-    fetch("data/portfolio.json")
-        .then((response) => response.json())
-        .then((data) => {
-            // Iterate through the JSON data and create HTML elements
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/${item.image}" alt="${item.alt}" loading="lazy" style="width:100%">
-                    <div class="card-body">
-                        <h3 class="card-title">${item.title}</h3>
-                        <p class="card-text">${item.text}</p>
-                        <div class="text-center">
-                            <a href="${item.link}" class="btn btn-success" target="_blank" >Lien Github</a>
-                        </div>
-                    </div>
-                </div>
-                `;
+  // Conteneur pour les boutons
+  const filtresContainer = document.createElement("div");
+  filtresContainer.id = "button-container";
+  filtresContainer.classList.add("text-center", "my-3");
+  container.appendChild(filtresContainer);
 
-                // Append the card to the current row
-                row.appendChild(card);
+  fetch("data/portfolio.json")
+    .then(response => response.json())
+    .then(data => {
 
-                // If the index is a multiple of 3 or it's the last element, create a new row
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
-            });
+      // Créer UNE seule ligne pour toutes les cartes
+      const row = document.createElement("div");
+      row.classList.add("row");
+      container.appendChild(row);
+
+      // Créer toutes les cartes
+      data.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("col-lg-4", "mt-4", "portfolio-card");
+        card.dataset.category = item.category;
+        card.innerHTML = `
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="images/${item.image}" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">${item.title}</h4>
+              <p class="card-text">${item.text}</p>
+              <div class="text-center">
+                <a href="${item.link}" class="btn btn-success">Lien Github</a>
+              </div>
+            </div>
+          </div>
+        `;
+        row.appendChild(card);
+      });
+
+      // Bouton "Tous"
+      const boutonTous = document.createElement("button");
+      boutonTous.innerText = "Tous";
+      boutonTous.classList.add("filtres-button", "active");
+      boutonTous.addEventListener("click", () => {
+        activerBoutonActif(boutonTous);
+        document.querySelectorAll(".portfolio-card").forEach(c => c.style.display = "");
+      });
+      filtresContainer.appendChild(boutonTous);
+
+      // Boutons par catégorie
+      const categories = ["Tests", "Développement", "Plannification projet"];
+      categories.forEach(cat => {
+        const bouton = document.createElement("button");
+        bouton.innerText = cat;
+        bouton.classList.add("filtres-button");
+        bouton.addEventListener("click", () => {
+          activerBoutonActif(bouton);
+          document.querySelectorAll(".portfolio-card").forEach(c => {
+            c.style.display = c.dataset.category === cat ? "" : "none";
+          });
         });
+        filtresContainer.appendChild(bouton);
+      });
+    });
 }
-
-
 
 
 // effets au niveau de l'accueil du site // 
@@ -127,9 +184,18 @@ function slideAccueil() {
   elementsAccueil.forEach(element => observer.observe(element));
 }
 
+function activerBoutonActif(boutonActif) {
+    document.querySelectorAll(".filtres-button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+    boutonActif.classList.add("active");
+}
+
 // Call the functions to execute the code
 handleNavbarScroll();
 handleNavbarCollapse();
-createSkillsFromJSON();
+createHardSkillsFromJSON();
+createSoftSkillsFromJSON();
 createPortfolioFromJSON();
 slideAccueil();
+

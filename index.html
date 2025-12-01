@@ -44,10 +44,9 @@
                             <a class="nav-link" href="#portfolio">Mes projets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contactez-moi</a>
+                            <a class="nav-link" href="#contact-form">Contactez-moi</a>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -79,13 +78,14 @@
                         Suite à un intérêt grandissant pour le test, je me suis lancée, grâce au soutien de mes collègues devevelopeurs, dans une <strong> formation de testeur chez Openclassrooms </strong>. 
                         Aujourd'hui, je suis testeuse logiciel, tant <strong> manuels qu'automatisés</strong>. 
                     </p>
-                        <h2 class="titre-profil"> Pourquoi le test logiciel ? </h2>
-                        <p> Le test logiciel m'a rapidement intéressé pour plusieurs raisons : </p>
+                        <h2 class="titre-profil"> Ce que je fais : </h2>
                             <ul class="liste-points">
-                                <li> La recherche de bugs et l'exploration de tous les cas possibles me passionnent.</li>
-                                <li> L'amélioration continue afin d'optimiser la fluidité, la sécurité et l'esthétique du produit</li>
-                                <li> Des compétences en phase avec mes expériences en marketing et communication digitale.</li>
-                                <li> L'importance de l'empathie et la communication afin de bien collaborer avec l'équipe.</li>
+                                <li> <strong>Concevoir des cas de test</strong> à partir des besoins fonctionnels </li>
+                                <li> Explorer le produit pour <strong>identifier des comportements inattendus</strong> </li>
+                                <li> <strong>Analyser des anomalies</strong> pour en comprendre l'origine</li>
+                                <li> <strong>Tester des API</strong> via Postman / Swagger </li>
+                                <li> <strong>Automatiser des test</strong> pour renforcer la validation du produit  </li>
+                                <li> Lire les <strong>logs</strong> et utiliser les outils de <strong>debug</strong> pour isoler les problèmes </li>
                             </ul>
                 </div>
             </div>
@@ -95,11 +95,13 @@
 
 
     <!-- skills section-->
-    <section id="skills">
-        <div class="container">
-            <h2 class="text-center">Mes compétences</h2>
+   <section id="skills">
+    <div class="container">
+        <h2 class="text-center">Mes compétences</h2>
+        <div class="row" id="skillsRow">
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -112,30 +114,43 @@
 
 
 
-     <!-- contact section-->
-    <section id="contact">
+    <!-- Formualire de contact -->
+
+    <section id="contact-form">
         <div class="container mt-3 contactContent">
             <h2 class="text-center">Contactez-moi</h2>
-            <div class="row">
-                <div class="col-lg-4 mt-4 contactColumn">
-                    <i class="fa-solid fa-phone fa-4x"></i>
-                    <h3>Téléphone</h3>
-                    <p>06-06-06-06-06</p>
+
+            <!-- <div class="row justify-content-center mt-4 ">
+                <div class="card col-lg-6 contactCard p-4">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label"> Nom </label>
+                            <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Adresse email </label>
+                            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label"> Message </label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">Envoyer</button>
+                        </div>
+                    </form>
+                    <div id="formMessage" class="mt-3 text-center"></div>
                 </div>
-                <div class="col-lg-4 mt-4 contactColumn">
-                    <i class="fa-regular fa-envelope fa-4x"></i>
-                    <h3>Adresse email</h3>
-                    <p>email.de.test@gmail.com</p>
-                </div>
-                <div class="col-lg-4 mt-4 contactColumn">
-                    <i class="fa-brands fa-linkedin-in fa-4x"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Nom test</p>
-                </div>
-            </div>
+            </div>       -->
         </div>
     </section>
 
+            <div class="linkedInCard">
+                <a href="https://www.linkedin.com/in/amel-d-a1172b39a/" target="_blank" rel="noopener noreferrer" class="logo-linkedIn">
+                <i class="fa-brands fa-linkedin-in fa-4x"></i>
+                </a>
+                <h3>LinkedIn</h3>
+            </div>
 
 </main>
 
