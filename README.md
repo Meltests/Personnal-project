@@ -1,25 +1,6 @@
-# P12-testeur-logiciel-portfolio
-
-
 ### Description du projet ###
 
-
-Ce projet a pour but de présenter un Portfolio de testeur de fin de formation. 
-Ce projet se divise en deux partie :
-
-1. L'identification & correction des bugs et optimisation du site
-2. La personalisation du porfolio à mon profil. 
-
-
-### Prérequis ### 
-
-Pour démarrer ce site, il faut les outils suivants: 
-- Html/css
-- Javascript
-- VS Code
-- Lighthouse
-- Wave
-
+Ce projet est un Portefolio personnel à destination des recruteurs. 
 
 ### Installation et démarrage ### 
 
@@ -42,6 +23,3 @@ Clonez le projet pour le récupérer:
 Le site est héberger par Git Pages via l'url : 
 https://meltests.github.io/Porfolio-testeurQA/
 
-
-### Support ### 
-Le projet a été réalisé dans le cadre de la formation OpenClassrooms.
